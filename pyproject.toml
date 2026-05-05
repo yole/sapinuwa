@@ -1,0 +1,8 @@
+[project]
+name = "sapinuwa"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "pdfplumber==0.11.9",
+    "pdfsyntax==0.1.6",
+]
