@@ -91,7 +91,7 @@ def collect_unique_words(path):
     files = list(filter(lambda f: f.endswith(".pdf") and f.startswith("Or"), os.listdir("pdfs")))
     for f in files:
         print("Processing " + f)
-        lines = extract_tablet_lines("pdf/" + f)
+        lines = extract_tablet_lines("pdfs/" + f)
         base_height = lines[0]['chars'][0]['height']
         for l in lines[1:]:   # the first line is the tablet title
             words = extract_tablet_words(l, base_height)
