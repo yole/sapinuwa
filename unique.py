@@ -100,7 +100,7 @@ def collect_unique_words(path):
                 total_words += 1
 
                 if word in seen_words: continue
-                seen_words.add(word)   # we add both attested and cleaned version to seen words
+                attested_word = word
                 for x in garbage:
                     word = word.replace(x, '')
                 if is_broken_word(word):
@@ -119,6 +119,7 @@ def collect_unique_words(path):
                     if word not in tlhdig.unique_words:
                         unique_words.append(word)
                         unique_word_attestations[word] = [f.removesuffix(".pdf")]
+                seen_words.add(attested_word)   # we add both attested and cleaned version to seen words
 
     unique_words.sort()
 
